@@ -14,6 +14,35 @@ private:
 	DegreeProgram degree;
 
 public:
+	// Getters
+	int getStudentID() {
+		return studentID;
+	}
+
+	string getFirstName() {
+		return firstName;
+	}
+
+	string getLastName() {
+		return lastName;
+	}
+	
+	string getEmail() {
+		return email;
+	}
+
+	int getAge() {
+		return age;
+	}
+
+	int getNumDaysToFinishCourse() {
+		return numDaysToFinishCourse[9];
+	}
+
+	DegreeProgram getDegreeProgram() {
+		return degree;
+	}
+
 	// Setters
 	void setStudentID(int id) {
 		studentID = id;
