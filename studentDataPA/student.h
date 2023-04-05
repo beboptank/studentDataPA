@@ -15,56 +15,56 @@ private:
 
 public:
 	// Getters
-	string getStudentID() {
+	string GetStudentID() {
 		return studentID;
 	}
 
-	string getFirstName() {
+	string GetFirstName() {
 		return firstName;
 	}
 
-	string getLastName() {
+	string GetLastName() {
 		return lastName;
 	}
 	
-	string getEmail() {
+	string GetEmail() {
 		return email;
 	}
 
-	int getAge() {
+	int GetAge() {
 		return age;
 	}
 
-	int getNumDaysToFinishCourse() {
+	int GetNumDaysToFinishCourse() {
 		return numDaysToFinishCourse[3];
 	}
 
-	DegreeProgram getDegreeProgram() {
+	DegreeProgram GetDegreeProgram() {
 		return degree;
 	}
 
 	// Setters
-	void setStudentID(string id) {
+	void SetStudentID(string id) {
 		studentID = id;
 	}
 
-	void setFirstName(string nameString) {
+	void SetFirstName(string nameString) {
 		firstName = nameString;
 	}
 
-	void setLastName(string nameString) {
+	void SetLastName(string nameString) {
 		lastName = nameString;
 	}
 
-	void setEmail(string emailString) {
+	void SetEmail(string emailString) {
 		email = emailString;
 	}
 
-	void setAge(int ageInt) {
+	void SetAge(int ageInt) {
 		age = ageInt;
 	}
 
-	void setNumDaysToFinishCourse(int array[3]) {
+	void SetNumDaysToFinishCourse(int array[3]) {
 		numDaysToFinishCourse[3] = array[3];
 	}
 
