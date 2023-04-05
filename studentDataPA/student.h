@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include "../studentDataPA/degree.h"
 using namespace std;
@@ -66,6 +67,21 @@ public:
 
 	void SetNumDaysToFinishCourse(int array[3]) {
 		numDaysToFinishCourse[3] = array[3];
+	}
+
+	void SetDegreeProgram(DegreeProgram degreeProgram) {
+		degree = degreeProgram;
+	}
+
+	// Print
+
+	void print() {
+		cout << "Student ID: " << GetStudentID() << endl;
+		cout << "Name: " << GetFirstName() << " " << GetLastName() << endl;
+		cout << "Email: " << GetEmail() << endl;
+		cout << "Age: " << GetAge() << endl;
+		cout << "Days to finish course: " << GetNumDaysToFinishCourse() << endl;
+		cout << "Degree: " << GetDegreeProgram() << endl;
 	}
 
 	// Constructor
