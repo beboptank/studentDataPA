@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../studentDataPA/degree.h"
+#include "student.h"
 using namespace std;
 
 class Student {

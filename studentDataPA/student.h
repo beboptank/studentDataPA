@@ -2,97 +2,41 @@
 #include <iostream>
 #include <string>
 #include "../studentDataPA/degree.h"
+#include "student.cpp"
 using namespace std;
 
-class Student {
-private:
-	string studentID;
-	string firstName;
-	string lastName;
-	string email;
-	int age;
-	int numDaysToFinishCourse[3];
-	DegreeProgram degree;
 
-public:
-	// Getters
-	string GetStudentID() {
-		return studentID;
-	}
+// Getters
+string GetStudentID();
 
-	string GetFirstName() {
-		return firstName;
-	}
+string GetFirstName();
 
-	string GetLastName() {
-		return lastName;
-	}
+string GetLastName();
 	
-	string GetEmail() {
-		return email;
-	}
+string GetEmail();
 
-	int GetAge() {
-		return age;
-	}
+int GetAge();
 
-	int GetNumDaysToFinishCourse() {
-		return numDaysToFinishCourse[3];
-	}
+int GetNumDaysToFinishCourse();
 
-	DegreeProgram GetDegreeProgram() {
-		return degree;
-	}
+DegreeProgram GetDegreeProgram();
 
-	// Setters
-	void SetStudentID(string id) {
-		studentID = id;
-	}
+// Setters
+void SetStudentID(string id);
 
-	void SetFirstName(string nameString) {
-		firstName = nameString;
-	}
+void SetFirstName(string nameString);
 
-	void SetLastName(string nameString) {
-		lastName = nameString;
-	}
+void SetLastName(string nameString);
 
-	void SetEmail(string emailString) {
-		email = emailString;
-	}
+void SetEmail(string emailString);
 
-	void SetAge(int ageInt) {
-		age = ageInt;
-	}
+void SetAge(int ageInt);
 
-	void SetNumDaysToFinishCourse(int array[3]) {
-		numDaysToFinishCourse[3] = array[3];
-	}
+void SetNumDaysToFinishCourse(int array[3]);
 
-	void SetDegreeProgram(DegreeProgram degreeProgram) {
-		degree = degreeProgram;
-	}
+void SetDegreeProgram(DegreeProgram degreeProgram);
 
-	// Print
+// Print
 
-	void print() {
-		cout << "Student ID: " << GetStudentID() << endl;
-		cout << "Name: " << GetFirstName() << " " << GetLastName() << endl;
-		cout << "Email: " << GetEmail() << endl;
-		cout << "Age: " << GetAge() << endl;
-		cout << "Days to finish course: " << GetNumDaysToFinishCourse() << endl;
-		cout << "Degree: " << GetDegreeProgram() << endl;
-	}
+void print();
 
-	// Constructor
-
-	Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram) {
-		studentID = id;
-		firstName = first;
-		lastName = last;
-		email = emailAddress;
-		age = studentAge;
-		numDaysToFinishCourse[3] = numDaysToFinishCourseArray[3];
-		degree = degreeProgram;
-	}
-};
