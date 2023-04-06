@@ -1,3 +1,6 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #pragma once
 #include <iostream>
 #include <string>
@@ -40,3 +43,4 @@ void SetDegreeProgram(DegreeProgram degreeProgram);
 
 void print();
 
+#endif
