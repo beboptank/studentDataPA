@@ -8,39 +8,62 @@
 #include "student.cpp"
 using namespace std;
 
+class Student {
 
-// Getters
-string GetStudentID();
+	public:
+		// Getters
+		string GetStudentID();
 
-string GetFirstName();
+		string GetFirstName();
 
-string GetLastName();
+		string GetLastName();
+
+		string GetEmail();
+
+		int GetAge();
+
+		int GetNumDaysToFinishCourse();
+
+		DegreeProgram GetDegreeProgram();
+
+		// Setters
+		void SetStudentID(string id);
+
+		void SetFirstName(string nameString);
+
+		void SetLastName(string nameString);
+
+		void SetEmail(string emailString);
+
+		void SetAge(int ageInt);
+
+		void SetNumDaysToFinishCourse(int array[3]);
+
+		void SetDegreeProgram(DegreeProgram degreeProgram);
+
+		// Print
+
+		void Print();
 	
-string GetEmail();
+	private:
+		string studentID;
+		string firstName;
+		string lastName;
+		string email;
+		int age;
+		int numDaysToFinishCourse[3];
+		DegreeProgram degree;
 
-int GetAge();
+	Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram) {
+		studentID = id;
+		firstName = first;
+		lastName = last;
+		email = emailAddress;
+		age = studentAge;
+		numDaysToFinishCourse[3] = numDaysToFinishCourseArray[3];
+		degree = degreeProgram;
+	}
 
-int GetNumDaysToFinishCourse();
-
-DegreeProgram GetDegreeProgram();
-
-// Setters
-void SetStudentID(string id);
-
-void SetFirstName(string nameString);
-
-void SetLastName(string nameString);
-
-void SetEmail(string emailString);
-
-void SetAge(int ageInt);
-
-void SetNumDaysToFinishCourse(int array[3]);
-
-void SetDegreeProgram(DegreeProgram degreeProgram);
-
-// Print
-
-void print();
+};
 
 #endif

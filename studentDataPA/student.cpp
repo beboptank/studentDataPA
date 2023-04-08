@@ -4,95 +4,71 @@
 #include "student.h"
 using namespace std;
 
-class Student {
-private:
-	string studentID;
-	string firstName;
-	string lastName;
-	string email;
-	int age;
-	int numDaysToFinishCourse[3];
-	DegreeProgram degree;
+// Getters
+string Student::GetStudentID() {
+	return studentID;
+}
 
-public:
-	// Getters
-	string GetStudentID() {
-		return studentID;
-	}
+string Student::GetFirstName() {
+	return firstName;
+}
 
-	string GetFirstName() {
-		return firstName;
-	}
+string Student::GetLastName() {
+	return lastName;
+}	
 
-	string GetLastName() {
-		return lastName;
-	}
+string Student::GetEmail() {
+	return email;
+}
 
-	string GetEmail() {
-		return email;
-	}
+int Student::GetAge() {
+	return age;
+}
 
-	int GetAge() {
-		return age;
-	}
+int Student::GetNumDaysToFinishCourse() {
+	return numDaysToFinishCourse[3];
+}
 
-	int GetNumDaysToFinishCourse() {
-		return numDaysToFinishCourse[3];
-	}
+DegreeProgram Student::GetDegreeProgram() {
+	return degree;
+}
 
-	DegreeProgram GetDegreeProgram() {
-		return degree;
-	}
+// Setters
+void Student::SetStudentID(string id) {
+	studentID = id;
+}
 
-	// Setters
-	void SetStudentID(int id) {
-		studentID = id;
-	}
+void Student::SetFirstName(string nameString) {
+	firstName = nameString;
+}
 
-	void SetFirstName(string nameString) {
-		firstName = nameString;
-	}
+void Student::SetLastName(string nameString) {
+	lastName = nameString;
+}
 
-	void SetLastName(string nameString) {
-		lastName = nameString;
-	}
+void Student::SetEmail(string emailString) {
+	email = emailString;
+}
 
-	void SetEmail(string emailString) {
-		email = emailString;
-	}
+void Student::SetAge(int ageInt) {
+	age = ageInt;
+}
 
-	void SetAge(int ageInt) {
-		age = ageInt;
-	}
+void Student::SetNumDaysToFinishCourse(int array[3]) {
+	numDaysToFinishCourse[3] = array[3];
+}
 
-	void SetNumDaysToFinishCourse(int array[3]) {
-		numDaysToFinishCourse[3] = array[3];
-	}
+void Student::SetDegreeProgram(DegreeProgram degreeProgram) {
+	degree = degreeProgram;
+}
 
-	void SetDegreeProgram(DegreeProgram degreeProgram) {
-		degree = degreeProgram;
-	}
+// Print
 
-	// Print
-
-	void print() {
-		cout << "Student ID: " << GetStudentID() << endl;
-		cout << "Name: " << GetFirstName() << " " << GetLastName() << endl;
-		cout << "Email: " << GetEmail() << endl;
-		cout << "Age: " << GetAge() << endl;
-		cout << "Days to finish course: " << GetNumDaysToFinishCourse() << endl;
-		cout << "Degree: " << GetDegreeProgram() << endl;
-	}
-
-	// Constructor
-
-	Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram) {
-		studentID = id;
-		firstName = first;
-		lastName = last;
-		email = emailAddress;
-		age = studentAge;
-		numDaysToFinishCourse[3] = numDaysToFinishCourseArray[3];
-		degree = degreeProgram;
-	}
-};
+void Student::Print() {
+	cout << "Student ID: " << GetStudentID() << endl;
+	cout << "Name: " << GetFirstName() << " " << GetLastName() << endl;
+	cout << "Email: " << GetEmail() << endl;
+	cout << "Age: " << GetAge() << endl;
+	cout << "Days to finish course: " << GetNumDaysToFinishCourse() << endl;
+	cout << "Degree: " << GetDegreeProgram() << endl;
+}
