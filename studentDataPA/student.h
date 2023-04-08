@@ -54,15 +54,7 @@ class Student {
 		int numDaysToFinishCourse[3];
 		DegreeProgram degree;
 
-	Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram) {
-		studentID = id;
-		firstName = first;
-		lastName = last;
-		email = emailAddress;
-		age = studentAge;
-		numDaysToFinishCourse[3] = numDaysToFinishCourseArray[3];
-		degree = degreeProgram;
-	}
+		Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram);
 
 };
 

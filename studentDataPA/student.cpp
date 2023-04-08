@@ -2,7 +2,6 @@
 #include <string>
 #include "../studentDataPA/degree.h"
 #include "student.h"
-using namespace std;
 
 // Getters
 string Student::GetStudentID() {
@@ -71,4 +70,16 @@ void Student::Print() {
 	cout << "Age: " << GetAge() << endl;
 	cout << "Days to finish course: " << GetNumDaysToFinishCourse() << endl;
 	cout << "Degree: " << GetDegreeProgram() << endl;
+}
+
+// Constructor
+
+Student::Student(string id, string first, string last, string emailAddress, int studentAge, int numberDaysToFinishCourse[3], DegreeProgram degreeProgram) {
+	SetStudentID(id);
+	SetFirstName(first);
+	SetLastName(last);
+	SetEmail(emailAddress);
+	SetAge(studentAge);
+	SetNumDaysToFinishCourse(numberDaysToFinishCourse);
+	SetDegreeProgram(degreeProgram);
 }
