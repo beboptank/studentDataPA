@@ -8,12 +8,14 @@ Student::Student() {
 	id = -1;
 	firstName = "John";
 	lastName = "Smith";
+	emailAddress = "johnsmith@abc.com";
 }
 
-Student::Student(int id, string firstName, string lastName) {
+Student::Student(int id, string firstName, string lastName, string emailAddress) {
 	this->id = id;
 	this->firstName = firstName;
 	this->lastName = lastName;
+	this->emailAddress = emailAddress;
 }
 
 // Setters
@@ -30,6 +32,10 @@ void Student::SetStudentLastName(string newLastName) {
 	lastName = newLastName;
 }
 
+void Student::SetStudentEmailAddress(string newEmailAddress) {
+	emailAddress = newEmailAddress;
+}
+
 // Getters
 
 int Student::GetStudentID() {
@@ -44,10 +50,15 @@ string Student::GetStudentLastName() {
 	return lastName;
 }
 
+string Student::GetStudentEmailAddress() {
+	return emailAddress;
+}
+
 // Print
 
 void Student::Print() {
 	cout << "Student ID: " << GetStudentID() << endl;
 	cout << "First Name: " << GetStudentFirstName() << endl;
 	cout << "Last Name: " << GetStudentLastName() << endl;
+	cout << "Email address: " << GetStudentEmailAddress() << endl;
 }
