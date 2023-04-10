@@ -10,5 +10,9 @@ int main() {
 
 	student_test.Print();
 
+	Student timmy(1, "Timmy");
+
+	timmy.Print();
+
 	return 0;
 }
