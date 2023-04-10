@@ -10,7 +10,7 @@ int main() {
 
 	student_test.Print();
 
-	Student timmy(1, "Timmy", "Baker", "timmybaker@wgu.edu");
+	Student timmy(1, "Timmy", "Baker", "timmybaker@wgu.edu", 21);
 
 	timmy.Print();
 

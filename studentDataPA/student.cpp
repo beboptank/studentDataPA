@@ -9,13 +9,15 @@ Student::Student() {
 	firstName = "John";
 	lastName = "Smith";
 	emailAddress = "johnsmith@abc.com";
+	age = 30;
 }
 
-Student::Student(int id, string firstName, string lastName, string emailAddress) {
+Student::Student(int id, string firstName, string lastName, string emailAddress, int age) {
 	this->id = id;
 	this->firstName = firstName;
 	this->lastName = lastName;
 	this->emailAddress = emailAddress;
+	this->age = age;
 }
 
 // Setters
@@ -36,6 +38,10 @@ void Student::SetStudentEmailAddress(string newEmailAddress) {
 	emailAddress = newEmailAddress;
 }
 
+void Student::SetStudentAge(int newAge) {
+	age = newAge;
+}
+
 // Getters
 
 int Student::GetStudentID() {
@@ -54,6 +60,10 @@ string Student::GetStudentEmailAddress() {
 	return emailAddress;
 }
 
+int Student::GetStudentAge() {
+	return age;
+}
+
 // Print
 
 void Student::Print() {
@@ -61,4 +71,5 @@ void Student::Print() {
 	cout << "First Name: " << GetStudentFirstName() << endl;
 	cout << "Last Name: " << GetStudentLastName() << endl;
 	cout << "Email address: " << GetStudentEmailAddress() << endl;
+	cout << "Age: " << GetStudentAge() << endl;
 }

@@ -10,13 +10,14 @@ private:
 	string firstName;
 	string lastName;
 	string emailAddress;
+	int age;
 
 public:
 
 	// Constructors
 	Student();
 
-	Student(int id, string firstName, string lastName, string emailAddress);
+	Student(int id, string firstName, string lastName, string emailAddress, int age);
 
 	// Setters
 	void SetStudentID(int id);
@@ -27,6 +28,8 @@ public:
 
 	void SetStudentEmailAddress(string emailAddress);
 
+	void SetStudentAge(int age);
+
 	// Getters
 	int GetStudentID();
 	
@@ -35,6 +38,8 @@ public:
 	string GetStudentLastName();
 
 	string GetStudentEmailAddress();
+
+	int GetStudentAge();
 
 	// Print
 	void Print();
