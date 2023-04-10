@@ -4,7 +4,7 @@
 #include "student.h"
 
 // Getters
-string Student::GetStudentID() {
+int Student::GetStudentID() {
 	return studentID;
 }
 
@@ -33,7 +33,7 @@ DegreeProgram Student::GetDegreeProgram() {
 }
 
 // Setters
-void Student::SetStudentID(string id) {
+void Student::SetStudentID(int id) {
 	studentID = id;
 }
 
@@ -74,7 +74,7 @@ void Student::Print() {
 
 // Constructor
 
-Student::Student(string id, string first, string last, string emailAddress, int studentAge, int numberDaysToFinishCourse[3], DegreeProgram degreeProgram) {
+Student::Student(int id, string first, string last, string emailAddress, int studentAge, int numberDaysToFinishCourse[3], DegreeProgram degreeProgram) {
 	SetStudentID(id);
 	SetFirstName(first);
 	SetLastName(last);
@@ -82,4 +82,14 @@ Student::Student(string id, string first, string last, string emailAddress, int 
 	SetAge(studentAge);
 	SetNumDaysToFinishCourse(numberDaysToFinishCourse);
 	SetDegreeProgram(degreeProgram);
+}
+
+Student::Student() {
+	studentID = 1;
+	firstName = "John";
+	lastName = "Programmer";
+	email = "john@abc.com";
+	age = 30;
+	numDaysToFinishCourse[3] = { };
+	degree = SOFTWARE;
 }

@@ -12,7 +12,7 @@ class Student {
 
 	public:
 		// Getters
-		string GetStudentID();
+		int GetStudentID();
 
 		string GetFirstName();
 
@@ -27,7 +27,7 @@ class Student {
 		DegreeProgram GetDegreeProgram();
 
 		// Setters
-		void SetStudentID(string id);
+		void SetStudentID(int id);
 
 		void SetFirstName(string nameString);
 
@@ -46,7 +46,7 @@ class Student {
 		void Print();
 	
 	private:
-		string studentID;
+		int studentID;
 		string firstName;
 		string lastName;
 		string email;
@@ -54,7 +54,9 @@ class Student {
 		int numDaysToFinishCourse[3];
 		DegreeProgram degree;
 
-		Student(string id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram);
+		Student(int id, string first, string last, string emailAddress, int studentAge, int numDaysToFinishCourseArray[3], DegreeProgram degreeProgram);
+
+		Student();
 
 };
 

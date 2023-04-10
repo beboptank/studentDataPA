@@ -6,7 +6,7 @@
 using namespace std;
 
 void main() {
-	string id = "1";
+	int id = 1;
 	string first = "Jeff";
 	string last = "Bright";
 	string email = "jeff@email.com";
@@ -14,5 +14,5 @@ void main() {
 	int days[3] = { 50, 24, 38 };
 	DegreeProgram degree = SOFTWARE;
 
-	Student jeff(id, first, last, email, age, days[3], degree);
+	//Student jeff(id, first, last, email, age, days[3], degree);
 }
