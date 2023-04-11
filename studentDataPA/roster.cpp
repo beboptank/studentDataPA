@@ -10,7 +10,7 @@ Roster::Roster() {
 }
 
 Roster::~Roster() {
-	for (int i = 0; i < numStudents; ++i) {
+	for (int i = 0; i < numStudents; i++) {
 		cout << "Destructor called: Student " << classRosterArray[i]->getStudentID() << endl;
 		delete classRosterArray[i];
 		classRosterArray[i] = nullptr;
@@ -76,7 +76,7 @@ void Roster::remove(string studentID) {
 
 	bool removed = false;
 
-	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
 		if (classRosterArray[i]->getStudentID() == studentID) {
 			removed = true;
 			Student* tempStudent = classRosterArray[i];
@@ -89,13 +89,13 @@ void Roster::remove(string studentID) {
 
 void Roster::printAll() {
 
-	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
 		Roster::classRosterArray[i]->print();
 	}
 }
 
 void Roster::printAverageDaysInCourse(string studentID) {
-	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
 		if (classRosterArray[i]->getStudentID() == studentID) {
 			cout << "Student " << studentID << "'s course days average: ";
 			cout << (classRosterArray[i]->getNumDaysToCompleteCourse()[0] +
@@ -105,12 +105,20 @@ void Roster::printAverageDaysInCourse(string studentID) {
 	}
 }
 
-void printInvalidEmails() {
-	//FIXME: print all invalid email addresses
+void Roster::printInvalidEmails() {
+
+	cout << "The following email addresses are invalid:" << endl;
+
+	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
+		string currentEmail = Roster::getStudents()[i]->getStudentEmailAddress();
+		if (currentEmail.find(' ') != string::npos && currentEmail.find('@') == string::npos && currentEmail.find('.') == string::npos) {
+			cout << currentEmail;
+		}
+	}
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
-	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
 		if (Roster::classRosterArray[i]->getDegreeProgram() == degreeProgram) {
 			classRosterArray[i]->print();
 		}
