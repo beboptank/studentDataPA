@@ -1,9 +1,15 @@
 #include <iostream>
-#include "student.h"
 #include "roster.h"
 using namespace std;
 
 int main() {
+
+	cout << "Scripting and Programming - Applications - C867" << endl;
+	cout << "Lanugage used: C++" << endl;
+	cout << "WGU Student ID: 005522686" << endl;
+	cout << "Name: Seth Christmus" << endl;
+
+
 
 	const string studentData[] =
 
@@ -17,6 +23,10 @@ int main() {
 	const int numStudents = 5;
 
 	Roster roster;
+
+	for (int i = 0; i < numStudents; i++) {
+		roster.parseData(studentData[i]);
+	}
 
 
 
