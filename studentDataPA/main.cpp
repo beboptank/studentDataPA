@@ -1,5 +1,6 @@
 #include <iostream>
 #include "student.h"
+#include "roster.h"
 using namespace std;
 
 int main() {
@@ -10,9 +11,17 @@ int main() {
 		"A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
 		"A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
 		"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-		"A5,Seth,Christmus,schr297@wgu.edu,31,40,23,32,SOFTWARE" };
+		"A5,Seth,Christmus,schr297@wgu.edu,31,40,23,32,SOFTWARE" 
+	};
 
-	Student student_test;
+	const int numStudents = 5;
+
+	Roster roster;
+
+
+
+
+	/*Student student_test;
 
 	string id_num = student_test.getStudentID();
 
@@ -22,7 +31,7 @@ int main() {
 
 	Student timmy("A9", "Timmy", "Baker", "timmybaker@wgu.edu", 21, array, DegreeProgram::SOFTWARE);
 
-	timmy.print();
+	timmy.print();*/
 
 	return 0;
 }

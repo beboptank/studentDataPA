@@ -5,11 +5,14 @@
 
 class Roster {
 private:
+	int rosterArrayIndex = -1;
 	const static int numStudents = 5;
 	Student* classRosterArray[numStudents] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 
 public:
 	Roster();
+
+	~Roster();
 
 	Student** getStudents();
 
@@ -24,6 +27,8 @@ public:
 	void printAverageDaysInCourse(string studentID);
 
 	void printInvalidEmails();
+
+	void printByDegreeProgram(DegreeProgram degreeProgram);
 };
 
 #endif
