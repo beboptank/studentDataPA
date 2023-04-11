@@ -9,7 +9,13 @@ Roster::Roster() {
 
 }
 
-Roster::~Roster() {}
+Roster::~Roster() {
+	for (int i = 0; i < numStudents; ++i) {
+		cout << "Destructor called: Student " << classRosterArray[i]->getStudentID() << endl;
+		delete classRosterArray[i];
+		classRosterArray[i] = nullptr;
+	}
+}
 
 Student** Roster::getStudents() {
 	return this->classRosterArray;
@@ -67,18 +73,36 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 }
 
 void Roster::remove(string studentID) {
-	//FIXME: remove a student from the roster
+
+	bool removed = false;
+
+	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+		if (classRosterArray[i]->getStudentID() == studentID) {
+			removed = true;
+			Student* tempStudent = classRosterArray[i];
+			classRosterArray[i] = classRosterArray[numStudents - 1];
+			classRosterArray[numStudents - 1] = tempStudent;
+			Roster::rosterArrayIndex--;
+		}
+	}
 }
 
 void Roster::printAll() {
 
-	for (int i = 0; i < 5; ++i) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
 		Roster::classRosterArray[i]->print();
 	}
 }
 
-void printAverageDaysInCourse(string studentID) {
-	//FIXME: print the average of the days the student spends in each course
+void Roster::printAverageDaysInCourse(string studentID) {
+	for (int i = 0; i <= Roster::rosterArrayIndex; ++i) {
+		if (classRosterArray[i]->getStudentID() == studentID) {
+			cout << "Student " << studentID << "'s course days average: ";
+			cout << (classRosterArray[i]->getNumDaysToCompleteCourse()[0] +
+				classRosterArray[i]->getNumDaysToCompleteCourse()[1] +
+				classRosterArray[i]->getNumDaysToCompleteCourse()[2]) / 3.0 << endl;
+		}
+	}
 }
 
 void printInvalidEmails() {
