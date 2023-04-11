@@ -12,7 +12,7 @@ public:
 	const static int DAYS_SIZE = 3;
 
 private:
-	int id;
+	string id;
 	string firstName;
 	string lastName;
 	string emailAddress;
@@ -25,42 +25,42 @@ public:
 	// Constructors
 	Student();
 
-	Student(int id, string firstName, string lastName, string emailAddress, int age, int numDaysToCompleteCourse[], DegreeProgram degree);
+	Student(string id, string firstName, string lastName, string emailAddress, int age, int numDaysToCompleteCourse[], DegreeProgram degree);
 
 	~Student();
 
 	// Setters
-	void SetStudentID(int id);
+	void setStudentID(string id);
 
-	void SetStudentFirstName(string firstName);
+	void setStudentFirstName(string firstName);
 
-	void SetStudentLastName(string lastName);
+	void setStudentLastName(string lastName);
 
-	void SetStudentEmailAddress(string emailAddress);
+	void setStudentEmailAddress(string emailAddress);
 
-	void SetStudentAge(int age);
+	void setStudentAge(int age);
 
-	void SetNumDaysToCompleteCourse(int numDaysToCompleteCourse[]);
+	void setNumDaysToCompleteCourse(int numDaysToCompleteCourse[]);
 
-	void SetDegreeProgram(DegreeProgram degree);
+	void setDegreeProgram(DegreeProgram degree);
 
 	// Getters
-	int GetStudentID();
+	string getStudentID();
 	
-	string GetStudentFirstName();
+	string getStudentFirstName();
 
-	string GetStudentLastName();
+	string getStudentLastName();
 
-	string GetStudentEmailAddress();
+	string getStudentEmailAddress();
 
-	int GetStudentAge();
+	int getStudentAge();
 
-	const int* GetNumDaysToCompleteCourse();
+	const int* getNumDaysToCompleteCourse();
 
-	DegreeProgram GetDegreeProgram();
+	DegreeProgram getDegreeProgram();
 
 	// Print
-	void Print();
+	void print();
 };
 
 #endif

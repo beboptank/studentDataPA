@@ -5,7 +5,7 @@
 using namespace std;
 
 Student::Student() {
-	id = -1;
+	id = "A-1";
 	firstName = "John";
 	lastName = "Smith";
 	emailAddress = "johnsmith@abc.com";
@@ -16,7 +16,7 @@ Student::Student() {
 	degree = DegreeProgram::SOFTWARE;
 }
 
-Student::Student(int id, string firstName, string lastName, string emailAddress, int age, int numDaysToCompleteCourse[], DegreeProgram degree) {
+Student::Student(string id, string firstName, string lastName, string emailAddress, int age, int numDaysToCompleteCourse[], DegreeProgram degree) {
 	this->id = id;
 	this->firstName = firstName;
 	this->lastName = lastName;
@@ -33,75 +33,75 @@ Student::~Student() {};
 
 // Setters
 
-void Student::SetStudentID(int newId) {
+void Student::setStudentID(string newId) {
 	this->id = newId;
 }
 
-void Student::SetStudentFirstName(string newFirstName) {
+void Student::setStudentFirstName(string newFirstName) {
 	this->firstName = newFirstName;
 }
 
-void Student::SetStudentLastName(string newLastName) {
+void Student::setStudentLastName(string newLastName) {
 	this->lastName = newLastName;
 }
 
-void Student::SetStudentEmailAddress(string newEmailAddress) {
+void Student::setStudentEmailAddress(string newEmailAddress) {
 	this->emailAddress = newEmailAddress;
 }
 
-void Student::SetStudentAge(int newAge) {
+void Student::setStudentAge(int newAge) {
 	this->age = newAge;
 }
 
-void Student::SetNumDaysToCompleteCourse(int numDaysToCompleteCourse[DAYS_SIZE]) {
+void Student::setNumDaysToCompleteCourse(int numDaysToCompleteCourse[DAYS_SIZE]) {
 	for (int i = 0; i < DAYS_SIZE; ++i) {
 		this->numDaysToCompleteCourse[i] = numDaysToCompleteCourse[i];
 	}
 }
 
 
-void Student::SetDegreeProgram(DegreeProgram newDegree) {
+void Student::setDegreeProgram(DegreeProgram newDegree) {
 	this->degree = newDegree;
 }
 
 // Getters
 
-int Student::GetStudentID() {
+string Student::getStudentID() {
 	return this->id;
 }
 
-string Student::GetStudentFirstName() {
+string Student::getStudentFirstName() {
 	return this->firstName;
 }
 
-string Student::GetStudentLastName() {
+string Student::getStudentLastName() {
 	return this->lastName;
 }
 
-string Student::GetStudentEmailAddress() {
+string Student::getStudentEmailAddress() {
 	return this->emailAddress;
 }
 
-int Student::GetStudentAge() {
+int Student::getStudentAge() {
 	return this->age;
 }
 
-const int* Student::GetNumDaysToCompleteCourse() {
+const int* Student::getNumDaysToCompleteCourse() {
 	return this->numDaysToCompleteCourse;
 }
 
-DegreeProgram Student::GetDegreeProgram() {
+DegreeProgram Student::getDegreeProgram() {
 	return this->degree;
 }
 
 // Print
 
-void Student::Print() {
-	cout << "Student ID: " << GetStudentID() << endl;
-	cout << "First Name: " << GetStudentFirstName() << endl;
-	cout << "Last Name: " << GetStudentLastName() << endl;
-	cout << "Email address: " << GetStudentEmailAddress() << endl;
-	cout << "Age: " << GetStudentAge() << endl;
+void Student::print() {
+	cout << "Student ID: " << getStudentID() << endl;
+	cout << "First Name: " << getStudentFirstName() << endl;
+	cout << "Last Name: " << getStudentLastName() << endl;
+	cout << "Email address: " << getStudentEmailAddress() << endl;
+	cout << "Age: " << getStudentAge() << endl;
 	cout << "Days left Course 1: " << this->numDaysToCompleteCourse[0] << endl;
 	cout << "Days left Course 2: " << this->numDaysToCompleteCourse[1] << endl;
 	cout << "Days Left Course 3: " << this->numDaysToCompleteCourse[2] << endl;
