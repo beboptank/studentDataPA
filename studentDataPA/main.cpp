@@ -10,7 +10,9 @@ int main() {
 
 	student_test.Print();
 
-	Student timmy(1, "Timmy", "Baker", "timmybaker@wgu.edu", 21);
+	int array[3] = { 1, 2, 3 };
+
+	Student timmy(1, "Timmy", "Baker", "timmybaker@wgu.edu", 21, array, DegreeProgram::SOFTWARE);
 
 	timmy.Print();
 
