@@ -5,6 +5,7 @@
 
 class Roster {
 private:
+	// rosterArrayIndex variable is for use with Roster object to more easily access Student pointers
 	int rosterArrayIndex = -1;
 	const static int numStudents = 5;
 	Student* classRosterArray[numStudents] = { nullptr, nullptr, nullptr, nullptr, nullptr };
