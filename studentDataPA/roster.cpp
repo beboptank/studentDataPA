@@ -122,8 +122,8 @@ void Roster::printInvalidEmails() {
 
 	for (int i = 0; i <= Roster::rosterArrayIndex; i++) {
 		string currentEmail = Roster::getStudents()[i]->getStudentEmailAddress();
-		if (currentEmail.find(' ') != string::npos && currentEmail.find('@') == string::npos && currentEmail.find('.') == string::npos) {
-			cout << currentEmail;
+		if (currentEmail.find(' ') != string::npos || currentEmail.find('@') == string::npos || currentEmail.find('.') == string::npos) {
+			cout << currentEmail << endl;
 		}
 	}
 }

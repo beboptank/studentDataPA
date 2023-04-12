@@ -97,13 +97,13 @@ DegreeProgram Student::getDegreeProgram() {
 // Print
 
 void Student::print() {
-	cout << getStudentID() + "\t" << endl;
-	cout << getStudentFirstName() << "\t" << endl;
-	cout << getStudentLastName() << "\t" << endl;
-	cout << getStudentEmailAddress() << "\t" << endl;
-	cout << getStudentAge() << "\t" << endl;
-	cout << this->numDaysToCompleteCourse[0] << "\t" << endl;
-	cout << this->numDaysToCompleteCourse[1] << "\t" << endl;
-	cout << this->numDaysToCompleteCourse[2] << "\t" << endl;
-	cout << degreePrograms[(int)this->degree] << "\t" << endl;
+	cout << getStudentID() + "\t";
+	cout << getStudentFirstName() << "\t";
+	cout << getStudentLastName() << "\t";
+	cout << getStudentEmailAddress() << "\t";
+	cout << getStudentAge() << "\t";
+	cout << this->numDaysToCompleteCourse[0] << "\t";
+	cout << this->numDaysToCompleteCourse[1] << "\t";
+	cout << this->numDaysToCompleteCourse[2] << "\t";
+	cout << degreePrograms[(int)this->degree] << endl;
 }
