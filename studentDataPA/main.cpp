@@ -10,26 +10,31 @@ int main() {
 	cout << "Name: Seth Christmus" << endl;
 
 	const int numStudents = 5;
+	DegreeProgram SOFTWARE = DegreeProgram::SOFTWARE;
 
 	Roster classRoster;
 
+	cout << "Displaying all students: " << endl;
 	classRoster.printAll();
+
+	cout << "Displaying invalid emails: " << endl;
 	classRoster.printInvalidEmails();
 
+	cout << "Displaying each student's average days to complete each course: " << endl;
+	for (int i = 0; i < numStudents; i++) {
+		classRoster.printAverageDaysInCourse(classRoster.getStudents()[i]->getStudentID());
+	}
+
+	cout << "Displaying students in the SOFTWARE degree program: " << endl;
+	classRoster.printByDegreeProgram(SOFTWARE);
+
+	cout << "Removing student A3 from the roster: " << endl;
+	classRoster.remove("A3");
+	cout << "Updated roster: " << endl;
+	classRoster.printAll();
+	classRoster.remove("A3");
 	
-
-
-	/*Student student_test;
-
-	string id_num = student_test.getStudentID();
-
-	student_test.print();
-
-	int array[3] = { 1, 2, 3 };
-
-	Student timmy("A9", "Timmy", "Baker", "timmybaker@wgu.edu", 21, array, DegreeProgram::SOFTWARE);
-
-	timmy.print();*/
+	cout << "Program complete. Calling destructors: " << endl;
 
 	return 0;
 }

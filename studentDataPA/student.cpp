@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Default constructor
 Student::Student() {
 	id = "A-1";
 	firstName = "John";
@@ -16,6 +17,7 @@ Student::Student() {
 	degree = DegreeProgram::SOFTWARE;
 }
 
+// Overloaded constructor
 Student::Student(string id, string firstName, string lastName, string emailAddress, int age, int numDaysToCompleteCourse[], DegreeProgram degree) {
 	this->id = id;
 	this->firstName = firstName;
@@ -29,6 +31,7 @@ Student::Student(string id, string firstName, string lastName, string emailAddre
 	
 }
 
+// Destructor
 Student::~Student() {};
 
 // Setters
@@ -97,13 +100,13 @@ DegreeProgram Student::getDegreeProgram() {
 // Print
 
 void Student::print() {
-	cout << getStudentID() + "\t";
-	cout << getStudentFirstName() << "\t";
-	cout << getStudentLastName() << "\t";
-	cout << getStudentEmailAddress() << "\t";
-	cout << getStudentAge() << "\t";
-	cout << this->numDaysToCompleteCourse[0] << "\t";
-	cout << this->numDaysToCompleteCourse[1] << "\t";
-	cout << this->numDaysToCompleteCourse[2] << "\t";
+	cout << getStudentID() << '\t';
+	cout << getStudentFirstName() << '\t';
+	cout << getStudentLastName() << '\t';
+	cout << getStudentEmailAddress() << '\t';
+	cout << getStudentAge() << '\t';
+	cout << this->numDaysToCompleteCourse[0] << '\t';
+	cout << this->numDaysToCompleteCourse[1] << '\t';
+	cout << this->numDaysToCompleteCourse[2] << '\t';
 	cout << degreePrograms[(int)this->degree] << endl;
 }
