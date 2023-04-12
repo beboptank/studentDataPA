@@ -14,7 +14,7 @@ int main() {
 	Roster classRoster;
 
 	classRoster.printAll();
-	classRoster.printInvalidEmails(); //FIXME: Not printing invalid email addresses
+	classRoster.printInvalidEmails();
 
 	
 
